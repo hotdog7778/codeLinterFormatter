@@ -1,0 +1,11 @@
+1. Extensions 탭에서 ESLint와 Prettier 확장 프로그램을 설치
+2. setting.json 파일에 아래 내용을 작성
+
+// 파일을 저장할 때마다 `eslint` 규칙에 따라 자동으로 코드를 수정
+"editor.codeActionsOnSave": { "source.fixAll.eslint": true },
+// `prettier`를 기본 포맷터로 지정
+"editor.defaultFormatter": "esbenp.prettier-vscode",
+// 파일을 저장할 때마다 포매팅 실행
+"editor.formatOnSave": true, 
+
+이제 파일을 저장할 때마다 ESLint 규칙에 따라 자동으로 코드가 수정되고 Prettier 설정에 따라 자동으로 코드가 포매팅 된다.

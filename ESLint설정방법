@@ -1,0 +1,57 @@
+; ESLint 설정을 시작
+npm init --yes
+npm init @eslint/config
+
+## How would you like to use ESLint? // eslint를 어떤 방식으로 쓸거에요?
+To check syntax only
+// 문법적 오류만 잡을거에요
+To check syntax and find problems
+// 문법이랑 에러도 잡을거에요
+To check syntax, find problems, and enforce code style
+// 문법 에러는 물론 코드 스타일도 중요해요
+
+## What type of modules does your project use? // 당신의 프로젝트에선 어떤 모듈화를 사용하나요?
+JavaScript modules (import/export) // es6의 import/export를 써요
+CommonJS (require/exports) // 근본 require / exports를 써요
+None of these // 모듈화는 사치일뿐
+
+## Which framework does your project use? // 어떤 프레임워크를 사용하나요?
+React
+Vue.js
+None of these // 안써요
+
+## Does your project use TypeScript? // 당신의 프로젝트는 typescript를 사용하나요?
+
+## Where does your code run? // 당신의 코드는 어디서 돌리나요?
+browser // 중복 선택도 가능
+Node
+
+## How would you like to define a style for your project? // 당신은 프로젝트의 코드 스타일을 어떻게 지정할 건가요?
+Use a popular style guide // 유명한 곳의 스타일을 가져와요!
+Answer questions about your style // 나의 길은 내가 개척한다!
+
+## Which style guide do you want to follow?
+Airbnb: https://github.com/airbnb/javascript
+Standard: https://github.com/standard/standard
+Google: https://github.com/google/eslint-config-google
+XO: https://github.com/xojs/eslint-config-xo
+
+## What format do you want your config file to be in? // 당신의 구성 파일을 어떻게 저장할까요?
+JavaScript
+YAML
+JSON
+
+## 위 부분까지 설정은 끝났다. 사용하는 법
+eslint 파일주소.파일확장자 로 eslint를 사용해 볼 수 있다.
+그리고 뒤에 --fix를 붙이는 것으로 eslint에 위배되는 사항을 알아서 고쳐준다.
+
+## 특정 제한을 .eslintrc.json 파일에 설정해놓고 검사를 수행할 수 있다.
+rules: {
+  // 들여쓰기 깊이 제한
+  'max-depth': ['error', 2],
+  // 함수의 매개변수 개수 제한
+  'max-params': ['error', 3],
+  // 함수의 길이 제한
+  'max-lines-per-function': ['error', { max: 10 }],
+},
+

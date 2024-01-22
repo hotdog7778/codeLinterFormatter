@@ -1,0 +1,29 @@
+1. 프로젝트 루트 폴더 위치에서 터미널에 npm i -D prettier eslint-config-prettier 명령어를 입력하여 prettier와 eslint-config-prettier 패키지를 설치합니다.
+2. 프로젝트 루트 폴더 위치에 .prettierrc 파일 (prettier 설정 파일)을 생성합니다.
+
+3. 옵션 설정
+; https://prettier.io/docs/en/options.html (추가적인 옵션 설정 찾아보기)
+{
+  // 쌍따옴표 대신 홑따옴표 사용
+  "singleQuote": true,
+  // 모든 구문 끝에 세미콜론 출력
+  "semi": true,
+  // 탭 대신 공백으로 들여쓰기
+  "useTabs": false,
+  // 들여쓰기 공백 수
+  "tabWidth": 2,
+  // 가능하면 후행 쉼표 사용
+  "trailingComma": "all",
+  // 줄 바꿈할 길이
+  "printWidth": 80,
+  // 객체 괄호에 공백 삽입
+  "bracketSpacing": true,
+  // 항상 화살표 함수의 매개 변수를 괄호로 감쌈
+  "arrowParens": "always",
+  // OS에 따른 코드라인 끝 처리 방식 사용
+  "endOfLine": "auto"
+}
+
+4. ESLint와의 충돌 방지를 위해 .eslintrc.js 또는 json 파일에서 extends 부분을 아래와 같이 수정합니다. 
+(이때, eslint-config-prettier가 앞선 설정들을 덮어쓸 수 있도록 prettier를 마지막에 작성하셔야 합니다.)
+; ex) extends: ['airbnb-base', 'prettier']
